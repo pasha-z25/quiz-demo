@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - demo on Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div :title="message">{{ message }}</div>
+      <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+      <wrapper v-if="currentStep === 1" :child="'text1'"></wrapper>
+      <wrapper v-if="currentStep === 2" :child="'text2'"></wrapper>
+    </div>
+
+    <!-- версия для разработки, отображает полезные предупреждения в консоли -->
+    <script src="./assets/vue/vue2/vue.js"></script>
+
+    <!-- production-версия, оптимизированная для размера и скорости -->
+    <!-- <script src="./assets/vue/vue2/vue.min.js"></script> -->
+    <script src="./assets/vue/components/wrapper.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
